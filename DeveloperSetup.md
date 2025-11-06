@@ -6,13 +6,13 @@ Welcome to your complete developer environment setup! This guide will walk you t
 
 **New developer?** Follow this recommended order:
 
-1. **🪟 Windows Users**: Start with [WSL Setup](./DevSetup/WSLSetup.md)
-2. **🐚 Terminal Enhancement**: Configure [Oh My Zsh](./DevSetup/OhMyZshSetup.md) (All platforms)
-3. **🛠️ Essential Tools**: Install [Development Tools](./DevSetup/DevToolsInstallation.md)
-4. **🔐 SSH Keys**: Set up [SSH Key Authentication](./DevSetup/SSHKeySetup.md)
-5. **📝 VS Code**: Configure [VS Code & Extensions](./DevSetup/VSCodeSetup.md)
-6. **🔒 Security**: Set up [Security Tools](./DevSetup/SecurityTools.md)
-7. **📚 Learn**: Explore [Learning Resources](./DevSetup/LearningResources.md)
+1. **Windows Users**: Start with [WSL Setup](./DevSetup/WSLSetup.md)
+2. **Terminal Enhancement**: Configure [Oh My Zsh](./DevSetup/OhMyZshSetup.md) (All platforms)
+3. **Essential Tools**: Install [Development Tools](./DevSetup/DevToolsInstallation.md)
+4. **SSH Keys**: Set up [SSH Key Authentication](./DevSetup/SSHKeySetup.md)
+5. **VS Code**: Configure [VS Code & Extensions](./DevSetup/VSCodeSetup.md)
+6. **Security**: Set up [Security Tools](./DevSetup/SecurityTools.md)
+7. **Learn**: Explore [Learning Resources](./DevSetup/LearningResources.md)
 
 ## 📋 Setup Guides
 
