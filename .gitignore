@@ -1,0 +1,54 @@
+# Node.js / npm
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+.cache/
+.next/
+out/
+coverage/
+
+# Vite
+.vite/
+
+# TypeScript
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+env/
+venv/
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files (put example values in .env.example instead)
+.env
+.env.local
+.env.*.local
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+docker-compose.override.yml
+
+# AutoCAD lock files
+*.dwl
+*.dwl2
