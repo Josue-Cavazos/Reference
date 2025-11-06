@@ -13,8 +13,19 @@ Welcome to our comprehensive developer reference repository! This is your one-st
 
 | Guide | Description | When to Use |
 |-------|-------------|-------------|
-| **[DeveloperSetup.md](./DeveloperSetup.md)** | Complete environment setup for Windows/WSL and macOS | Setting up a new machine |
+| **[DeveloperSetup.md](./DeveloperSetup.md)** | Complete environment setup hub with organized sub-guides | Setting up a new machine |
 | **[PrismaSetup.md](./PrismaSetup.md)** | Database configuration, schema setup, and common commands | Working with databases |
+
+### 🔧 Developer Setup Sub-Guides
+| Guide | Description | Platform |
+|-------|-------------|----------|
+| **[WSL Setup](./DevSetup/WSLSetup.md)** | Windows Subsystem for Linux installation | Windows |
+| **[Oh My Zsh](./DevSetup/OhMyZshSetup.md)** | Enhanced terminal with themes and plugins | All |
+| **[Dev Tools](./DevSetup/DevToolsInstallation.md)** | Git, Python, Node.js installation | All |
+| **[SSH Keys](./DevSetup/SSHKeySetup.md)** | GitHub authentication setup | All |
+| **[VS Code](./DevSetup/VSCodeSetup.md)** | Editor and extensions configuration | All |
+| **[Security](./DevSetup/SecurityTools.md)** | Password managers and security tools | All |
+| **[Learning](./DevSetup/LearningResources.md)** | Tutorials and educational resources | All |
 
 ## 🎯 What You'll Find Here
 

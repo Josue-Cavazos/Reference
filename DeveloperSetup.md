@@ -1,165 +1,53 @@
 # Developer Environment Setup Guide
 
-## Installing WSL & Oh My Zsh (Windows)
-1. In Windows CMD type:
-   ```cmd
-   wsl --install
-   ```
-2. Restart your computer
-3. Restart CMD and type `wsl` - This should launch the Linux shell
-4. Install Oh My Zsh:
-   ```bash
-   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-   ```
-    
-   May need to install zsh first:
-   ```bash
-   sudo apt update
-   sudo apt install zsh
-   ```
-5. Find `.zshrc` file and open it in VS Code to edit your settings
-6. Sample `.zshrc` configuration (recommended):
-   ```bash
-   # Basic .zshrc for a clean prompt
-   export ZSH_THEME="robbyrussell"
-   export PATH=$HOME/bin:/usr/local/bin:$PATH
-   plugins=(git python virtualenvwrapper)
-   
-   # Enable command auto-correction
-   setopt correct
-   
-   # History
-   HISTSIZE=1000
-   SAVEHIST=1000
-   HISTFILE=~/.zsh_history
-   
-   # Git branch support
-   autoload -Uz vcs_info
-   precmd() { vcs_info }
-   zstyle ':vcs_info:git:*' formats '🚀 %b'
-   setopt prompt_subst
-   git_prompt_info() { echo "%F{white}${vcs_info_msg_0_}%f" }
-   
-   # Prompt with Git info
-   PROMPT='%F{blue}%1~%f $(git_prompt_info) ➜  '
-   
-   # Aliases
-   alias ll='ls -lah'
-   alias gs='git status'
-   alias ga='git add .'
-   alias gp='git push'
-   alias gc='git commit -m'
-   
-   # Enable completion (if available)
-   autoload -Uz compinit && compinit
-   
-   # Always start in your project folder
-   #cd ~/DevProjects
-   #eval "$(pyenv init -)"
-   ```
-   
-   💡 **Tip**: Explore more themes and settings at [Oh My Zsh Themes](https://github.com/ohmyzsh/ohmyzsh/wiki/themes)
-7. When launching VS Code, click on the bottom left corner (remote connection icon) and install the "Remote - WSL" extension
+Welcome to your complete developer environment setup! This guide will walk you through everything needed to get a productive development environment running on your machine.
 
-## Essential Development Tools
+## 🚀 Quick Start Path
 
-### 1. Git
-**Ubuntu/WSL:**
-```bash
-sudo apt update
-sudo apt install git
-git config --global user.name "YOUR_GITHUB_USERNAME"
-git config --global user.email "YOUR_EMAIL@example.com"
-```
+**New developer?** Follow this recommended order:
 
-**macOS:**
-```bash
-brew install git
-git config --global user.name "YOUR_GITHUB_USERNAME"
-git config --global user.email "YOUR_EMAIL@example.com"
-```
-*Note: You may need to install Homebrew first (see section 5)*
+1. **🪟 Windows Users**: Start with [WSL Setup](./DevSetup/WSLSetup.md)
+2. **🐚 Terminal Enhancement**: Configure [Oh My Zsh](./DevSetup/OhMyZshSetup.md) (All platforms)
+3. **🛠️ Essential Tools**: Install [Development Tools](./DevSetup/DevToolsInstallation.md)
+4. **🔐 SSH Keys**: Set up [SSH Key Authentication](./DevSetup/SSHKeySetup.md)
+5. **📝 VS Code**: Configure [VS Code & Extensions](./DevSetup/VSCodeSetup.md)
+6. **🔒 Security**: Set up [Security Tools](./DevSetup/SecurityTools.md)
+7. **📚 Learn**: Explore [Learning Resources](./DevSetup/LearningResources.md)
 
-### 2. Python (Latest 3.x)
-**Ubuntu/WSL:**
-```bash
-sudo apt update
-sudo apt install python3 python3-pip python3-venv
-```
+## 📋 Setup Guides
 
-**macOS:**
-```bash
-brew install python
-```
+| Guide | Description | Platform |
+|-------|-------------|----------|
+| **[WSL Setup](./DevSetup/WSLSetup.md)** | Windows Subsystem for Linux installation | Windows |
+| **[Oh My Zsh Setup](./DevSetup/OhMyZshSetup.md)** | Enhanced terminal with themes and plugins | All |
+| **[Development Tools](./DevSetup/DevToolsInstallation.md)** | Git, Python, Node.js, and build essentials | All |
+| **[SSH Key Setup](./DevSetup/SSHKeySetup.md)** | GitHub SSH authentication configuration | All |
+| **[VS Code Setup](./DevSetup/VSCodeSetup.md)** | Editor configuration and essential extensions | All |
+| **[Security Tools](./DevSetup/SecurityTools.md)** | Password managers and security best practices | All |
+| **[Learning Resources](./DevSetup/LearningResources.md)** | Tutorials, games, and learning materials | All |
 
-### 3. Node.js & npm
-**Ubuntu/WSL:**
-```bash
-sudo apt update
-sudo apt install nodejs npm
-```
+## ⏱️ Time Estimates
 
-**macOS:**
-```bash
-brew install node
-```
+- **Quick setup** (experienced developers): ~30 minutes
+- **Full setup** (new to development): ~2-3 hours
+- **WSL setup** (Windows only): Additional ~45 minutes
 
-### 4. Build Essentials
-**Ubuntu/WSL:**
-```bash
-sudo apt update
-sudo apt install build-essential
-```
+## 🆘 Need Help?
 
-**macOS:**
-```bash
-xcode-select --install
-```
+- **Can't find something?** Check the individual guide files
+- **Run into issues?** Most common problems and solutions are documented in each guide
+- **Missing information?** Feel free to contribute improvements!
 
-### 5. Homebrew (macOS only)
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-## SSH Key Setup
-1. Navigate to home directory and generate a new SSH key:
-   ```bash
-   cd ~
-   ssh-keygen -t ed25519 -C "your-email@example.com"
-   ```
-   
-   **Recommendation**: Use no password for convenience (otherwise you'll need to enter it every time you push to GitHub). Accept the default file location.
+## ✅ Verification Checklist
 
-2. Find and copy your public SSH key:
-   ```bash
-   cd ~/.ssh
-   cat id_ed25519.pub
-   ```
+After completing setup, you should be able to:
 
-3. Add to GitHub:
-   - Go to your GitHub account → Profile → Settings
-   - Navigate to "SSH and GPG Keys"
-   - Click "New SSH Key"
-   - Give it a descriptive name (e.g., "Work Laptop")
-   - Paste your key and click "Add SSH Key"
+- [ ] Open a terminal and see a customized prompt
+- [ ] Run `git --version`, `python3 --version`, `node --version`
+- [ ] Clone repositories using SSH (no password prompts)
+- [ ] Open projects in VS Code with syntax highlighting
+- [ ] Access password manager for secure credential storage
 
-4. **For organization access**: After adding the key, find the dropdown to the right → "Configure SSO" → click "Authorize" for your organization
+---
 
-## Recommended Tools & Extensions
-
-### VS Code Extensions
-- **MSSQL**: Essential for database work
-- **Remote - WSL**: For Windows users
-- **GitLens**: Enhanced Git capabilities
-- **Prettier**: Code formatting
-- **ESLint**: JavaScript/TypeScript linting
-
-### Security & Password Management
-Get a [BitWarden](https://bitwarden.com/) account (personal with work email). This will be used to share encrypted credentials for:
-- SQL databases
-- Azure connection strings
-- Other shared development resources
-
-## Learning Resources
-- **Bash/Terminal**: [Terminus Game](https://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
-- **Git Workflows**: [Learn Git Branching](https://learngitbranching.js.org/)
-- **VS Code**: Built-in tutorial and documentation
+💡 **Tip**: Bookmark the individual guide files for quick reference during development!
