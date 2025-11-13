@@ -48,6 +48,7 @@ Paste the following into the appropriate generated files
 generator client {
   provider = "prisma-client-js"
   output   = "./generated/prisma"
+  binaryTargets = ["native", "linux-arm64-openssl-1.1.x"]
 }
 
 datasource db {
