@@ -20,7 +20,7 @@ npx prisma init
 ## Configure Database URL(s)
 The basic `.env` file will have a `DATABASE_URL` variable, set to an example. For Azure SQL, follow the example below to make your connection string - Replace everything in ALL CAPS:
 ```env
-DATABASE_URL="sqlserver://YOURSERVER.database.windows.net;user=USERNAME;password=PASSWORD;database=YOURDATABASE;encrypt=true;trustServerCertificate=false"
+DATABASE_URL="sqlserver://YOURSERVER.database.windows.net;user=USERNAME;password=PASSWORD;database=YOURDATABASE;encrypt=true;trustServerCertificate=true"
 ```
 
 ## File Templates
