@@ -83,6 +83,9 @@ To create and run migrations:
 npx prisma migrate dev --name init
 ```
 
+### Note 
+When working with multiple databases, use a `--schema=YOURSCHEMA.prisma` tag to specify which prisma database connection -
+*Applies when there are two or more separate schemas*
 ## Troubleshooting
 
 ### Common Issues
