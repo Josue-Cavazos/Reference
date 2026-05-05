@@ -6,7 +6,7 @@ Welcome to our comprehensive developer reference repository! This is your one-st
 
 **New to the team?** Follow this path:
 1. **[DeveloperSetup.md](./DeveloperSetup.md)** - Essential environment setup, dev tools, and SSH configuration
-2. **[PrismaSetup.md](./PrismaSetup.md)** - Database setup and Prisma configuration
+2. Choose a QuickStart guide for your stack in the `/QuickStart` folder
 3. Browse other framework-specific guides as needed
 
 ## 📚 Available Guides
@@ -14,7 +14,7 @@ Welcome to our comprehensive developer reference repository! This is your one-st
 | Guide | Description | When to Use |
 |-------|-------------|-------------|
 | **[DeveloperSetup.md](./DeveloperSetup.md)** | Complete environment setup hub with organized sub-guides | Setting up a new machine |
-| **[PrismaSetup.md](./PrismaSetup.md)** | Database configuration, schema setup, and common commands | Working with databases |
+| **[Express-TS](./QuickStart/Backend/Express-TS.md)** | TypeScript + Express + Prisma backend template | Starting a new backend project |
 
 ### 🔧 Developer Setup Sub-Guides
 | Guide | Description | Platform |
@@ -48,7 +48,6 @@ Found something missing or outdated? Please contribute!
 
 Future guides we're planning to add:
 
-- **Node.js & Express Setup**
 - **React/Frontend Tooling**
 - **Docker & Containerization**
 - **Testing Setup & Best Practices**
