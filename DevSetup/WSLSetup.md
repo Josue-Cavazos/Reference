@@ -23,7 +23,7 @@ After installation completes, restart your computer to finish the setup.
    
    If applicable, you may need to install a distribution
    ```cmd
-   wsl.exe Ubunutu --install
+   wsl.exe --install Ubuntu
    ```
 
 2. You'll be prompted to create a username and password for your Linux environment.
