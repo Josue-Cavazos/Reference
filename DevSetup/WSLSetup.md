@@ -20,6 +20,11 @@ After installation completes, restart your computer to finish the setup.
    wsl
    ```
    This should launch your Linux shell for the first time.
+   
+   If applicable, you may need to install a distribution
+   ```cmd
+   wsl.exe Ubunutu --install
+   ```
 
 2. You'll be prompted to create a username and password for your Linux environment.
 
