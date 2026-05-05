@@ -13,6 +13,8 @@ mkdir [YOUR-DIRECTORY] && cd [YOUR-DIRECTORY]
 npm init -y
 npm i @prisma/client
 npm i -D prisma typescript ts-node @types/node
+npm install @prisma/adapter-mssql
+npm install --save-dev @types/tedious
 npx tsc --init
 npx prisma init
 ```

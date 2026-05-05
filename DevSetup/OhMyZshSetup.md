@@ -42,38 +42,53 @@ Replace or update your `~/.zshrc` file with this configuration:
 export ZSH_THEME="robbyrussell"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 plugins=(git python virtualenvwrapper)
-
+ 
 # Enable command auto-correction
 setopt correct
-
+ 
 # History
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-
+ 
 # Git branch support
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' formats '🚀 %b'
 setopt prompt_subst
 git_prompt_info() { echo "%F{white}${vcs_info_msg_0_}%f" }
-
+ 
 # Prompt with Git info
 PROMPT='%F{blue}%1~%f $(git_prompt_info) ➜  '
-
+ 
+ 
+ 
 # Aliases
 alias ll='ls -lah'
 alias gs='git status'
 alias ga='git add .'
 alias gp='git push'
 alias gc='git commit -m'
+alias gch='git checkout'
+alias gfp='git fetch origin && git pull && git fetch -p'
+alias nrd='npm run dev'
+alias nrl='npm run lint' 
+alias zshrc='source ~/.zshrc'
+alias mkvenv='python3 -m venv .venv'
+alias venv='source .venv/bin/activate'
+alias pm='python main.py'
+alias rch='ruff check .'
 
+function md() {
+  pandoc $1 > /tmp/$1.html
+  xdg-open /tmp/$1.html
+}
+ 
 # Enable completion (if available)
 autoload -Uz compinit && compinit
-
-# Always start in your project folder (uncomment and modify as needed)
-#cd ~/DevProjects
-#eval "$(pyenv init -)"
+ 
+# Always start in your project folder
+#cd ~/DevProjectseval "$(pyenv init -)"
 ```
 
 ### Editing Your Configuration
