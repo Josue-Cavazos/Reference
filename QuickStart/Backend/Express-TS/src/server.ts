@@ -51,7 +51,7 @@ app.get('/health', (_req: Request, res: Response) => {
 app.use('/api/examples', exampleRoutes);
 
 // 404 handler - must be after all other routes
-app.all('*', (req: Request, _res: Response, next) => {
+app.use((req: Request, _res: Response, next) => {
   next(new AppError(`Cannot find ${req.originalUrl} on this server`, 404));
 });
 
